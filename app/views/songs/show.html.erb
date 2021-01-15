@@ -1,0 +1,13 @@
+<%= @song.title %><br>
+<%= @song.released %><br>
+<%= @song.release_year %><br>
+<%= @song.artist_name %><br>
+<%= @song.genre %><br>
+
+<% if flash[:messages]%>
+  <%flash[:messages].each do |message|%>
+    <%= message %><br>
+  <%end%>
+<%end%>
+
+<%= button_to "Delete Song", song_path(@song), method: "delete" %>
